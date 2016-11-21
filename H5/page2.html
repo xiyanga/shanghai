@@ -1,0 +1,348 @@
+<!doctype html>
+
+<head>
+	<title>新绎-上善</title>
+	<meta charset="utf-8" />
+	<meta name="apple-touch-fullscreen" content="YES" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="pragram" content="no-cache" />
+	<link rel="stylesheet" type="text/css" href="asset/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="asset/css/animate.css" />
+	<!--<script type="text/javascript" src="js/offline.js"></script>-->
+	<script type="text/javascript" src="asset/js/JSBridge.js"></script>
+	<script src="asset/js/TouchSlide.1.1.js" type="text/javascript" charset="utf-8"></script>
+
+	<!--移动端版本兼容 -->
+	<script type="text/javascript">
+		var mengvalue = -1;
+		 //if(mengvalue<0){mengvalue=0;}
+		var phoneWidth = parseInt(window.screen.width);
+		var phoneScale = phoneWidth / 640;
+		var ua = navigator.userAgent;//浏览器标识符
+		if (/Android (\d+\.\d+)/.test(ua)) {//如果为安卓版本
+			var version = parseFloat(RegExp.$1);
+			if (version > 2.3) {
+				document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+			} else {
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+	<!--移动端版本兼容 end -->
+</head>
+
+<body class='s-bg-ddd'>
+
+	<!--模版加载提示-->
+	<section class="u-alert">
+		<img style='display:none;' src="asset/images/loading_large.gif" />
+		<div class='alert-loading z-move'>
+			<div class='cycleWrap'><span class='cycle cycle-1'></span><span class='cycle cycle-2'> </span><span class='cycle cycle-3'></span><span class='cycle cycle-4'> </span> </div>
+			<div class="lineWrap"><span class='line line-1'></span> <span class='line line-2'></span><span class='line line-3'></span> </div>
+		</div>
+	</section>
+	<!--模版加载提示 end-->
+
+	<!-- 声音控件 -->
+	<section class="u-audio" data-src="asset/mp3/bg.mp3">
+		<p id="coffee_flow" class="btn_audio"><strong class="txt_audio z-hide">关闭</strong><span class="css_sprite01 audio_open"></span>
+			<div id="song_img" class="" style="display: none;">点击logo打开背景音乐</div>
+			<div class="coffee-steam-box" style="height: 100px; width: 44px; left: 60px; top: -50px; position: absolute; overflow: hidden; z-index: 0;"></div>
+		</p>
+	</section>
+
+	<!-- 箭头指示引导 end-->
+	<section class='u-arrow f-hide'>
+		<p class="css_sprite01"></p>
+	</section>
+
+	<!-- page页面内容 -->
+	<section class="p-ct">
+
+		<!-- 封页-->
+		<div class='m-page m-fengye f-hide' data-page-type='info_pic3' data-statics='info_pic3'>
+			<div class="page-con lazy-img" data-src='asset/images/coverbg.jpeg'>
+				<img src="asset/images/cover.png" class="top" />
+			</div>
+		</div>
+
+		<!-- 晨跑-->
+		<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+			<div class="page-con j-txtWrap lazy-img" data-src="asset/images/XXXXXXXXXX.jpg">
+				<img src="asset/images/page-01.jpg" class="lunbo" style="position: absolute; height: 100%;" />
+				<img src="asset/images/text-01.png" class="left" />
+				<a href="javascript:;" class="ico" dimg="asset/images/tc1.jpg" style="position: absolute; left:100%; top:150px; margin-left:-100px;">
+					<img src="asset/images/i1.png" />
+				</a>
+				<div class="e right">
+					<img src="asset/images/e.png" alt="" />
+					<ul class="flex">
+						<li></li>
+						<li><a href="javascript:;" myid="e01">基本信息</a> </li>
+						<li><a href="javascript:;" myid="e02">期望职位</a> </li>
+						<li><a href="javascript:;" myid="e03">职业技能</a> </li>
+						<li><a href="javascript:;" myid="e04">成功案例</a> </li>
+						<li><a href="javascript:;" myid="e05">自我评价</a> </li>
+						<li><a href="page2.html">返回首页</a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 阅读-->
+		<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+			<div class="page-con j-txtWrap lazy-img" data-src="asset/images/page-02.jpeg"  style="opacity: 0.8">
+				<img src="asset/images/text-02.png" class="bottom"/>
+				<div class="e top">
+					<img src="asset/images/e.png" alt="" />
+					<ul>
+						<li></li>
+						<li><a href="javascript:;" myid="e01">基本信息</a> </li>
+						<li><a href="javascript:;" myid="e02">期望职位</a> </li>
+						<li><a href="javascript:;" myid="e03">职业技能</a> </li>
+						<li><a href="javascript:;" myid="e04">成功案例</a> </li>
+						<li><a href="javascript:;" myid="e05">自我评价</a> </li>
+						<li><a href="page2.html">返回首页</a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 玩耍-->
+		<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+			<div class="page-con j-txtWrap lazy-img" data-src="asset/images/page-03.jpeg">
+				<img src="asset/images/text-03.png" class="top" />
+				<div class="e bottom">
+					<img src="asset/images/e.png" alt="" />
+					<ul>
+						<li></li>
+						<li><a href="javascript:;" myid="e01">基本信息</a> </li>
+						<li><a href="javascript:;" myid="e02">期望职位</a> </li>
+						<li><a href="javascript:;" myid="e03">职业技能</a> </li>
+						<li><a href="javascript:;" myid="e04">成功案例</a> </li>
+						<li><a href="javascript:;" myid="e05">自我评价</a> </li>
+						<li><a href="page2.html">返回首页</a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 午饭-->
+		<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+			<div class="page-con j-txtWrap lazy-img" data-src="asset/images/page-04.jpg">
+				<img src="asset/images/text-04.png" class="bottom" />
+				<div class="e top">
+					<img src="asset/images/e.png" alt="" />
+					<ul>
+						<li></li>
+						<li><a href="javascript:;" myid="e01">基本信息</a> </li>
+						<li><a href="javascript:;" myid="e02">期望职位</a> </li>
+						<li><a href="javascript:;" myid="e03">职业技能</a> </li>
+						<li><a href="javascript:;" myid="e04">成功案例</a> </li>
+						<li><a href="javascript:;" myid="e05">自我评价</a> </li>
+						<li><a href="page2.html">返回首页</a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 娱乐-->
+		<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+			<div class="page-con j-txtWrap lazy-img" data-src="asset/images/page-05.jpg">
+				<img src="asset/images/text-05.png" class="right" />
+				<div class="e left">
+					<img src="asset/images/e.png" alt="" />
+					<ul>
+						<li></li>
+						<li><a href="javascript:;" myid="e01">基本信息</a> </li>
+						<li><a href="javascript:;" myid="e02">期望职位</a> </li>
+						<li><a href="javascript:;" myid="e03">职业技能</a> </li>
+						<li><a href="javascript:;" myid="e04">成功案例</a> </li>
+						<li><a href="javascript:;" myid="e05">自我评价</a> </li>
+						<li><a href="page2.html">返回首页</a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 陪伴-->
+		<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+			<div class="page-con j-txtWrap lazy-img" data-src="asset/images/page-06.jpg">
+				<img src="asset/images/text-06.png" class="top" />
+				<div class="e bottom">
+					<img src="asset/images/e.png" alt="" />
+					<ul>
+						<li></li>
+						<li><a href="javascript:;" myid="e01">基本信息</a> </li>
+						<li><a href="javascript:;" myid="e02">期望职位</a> </li>
+						<li><a href="javascript:;" myid="e03">职业技能</a> </li>
+						<li><a href="javascript:;" myid="e04">成功案例</a> </li>
+						<li><a href="javascript:;" myid="e05">自我评价</a> </li>
+						<li><a href="page2.html">返回首页</a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 家政-->
+		<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+			<div class="page-con j-txtWrap lazy-img" data-src="asset/images/page-07.jpg">
+				<img src="asset/images/text-07.png" class="top" />
+				<div class="e bottom">
+					<img src="asset/images/e.png" alt="" />
+					<ul>
+						<li></li>
+						<li><a href="javascript:;" myid="e01">基本信息</a> </li>
+						<li><a href="javascript:;" myid="e02">期望职位</a> </li>
+						<li><a href="javascript:;" myid="e03">职业技能</a> </li>
+						<li><a href="javascript:;" myid="e04">成功案例</a> </li>
+						<li><a href="javascript:;" myid="e05">自我评价</a> </li>
+						<li><a href="page2.html">返回首页</a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 睡觉-->
+		<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+			<div class="page-con j-txtWrap lazy-img" data-src="asset/images/page-08.jpeg">
+				<img src="asset/images/text-08.png" class="bottom" />
+				<div class="e right">
+					<img src="asset/images/e.png" alt="" />
+					<ul>
+						<li></li>
+						<li><a href="javascript:;" myid="e01">基本信息</a> </li>
+						<li><a href="javascript:;" myid="e02">期望职位</a> </li>
+						<li><a href="javascript:;" myid="e03">职业技能</a> </li>
+						<li><a href="javascript:;" myid="e04">成功案例</a> </li>
+						<li><a href="javascript:;" myid="e05">自我评价</a> </li>
+						<li><a href="page2.html">返回首页</a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 微信-->
+		<div class='m-page m-bigTxt f-hide' data-page-type='bigTxt' data-statics='info_list'>
+			<div class="page-con j-txtWrap lazy-img" data-src="asset/images/page-09.jpeg">
+				<img src="asset/images/text-09.png" class="bottom" />
+			</div>
+			<div class="wxft">自我介绍简历（十四学长制作）</div>
+		</div>
+
+		<section class="u-pageLoading">
+			<img src="asset/images/load.gif" alt="loading" />
+		</section>
+
+		<!--8块弹出层-->
+		<div class="floatDiv floatTop">
+			<img src="asset/images/tc1.jpg" />
+			<a href="javascript:;" class="close"></a>
+		</div>
+
+		<!--小艺弹层-->
+
+		<div class="floatDiv2Mask"></div>
+		<div class="floatDiv2" id="e01">
+			<div class="touchSlide">
+			</div>
+			<div class="content-wrap">
+				<b class="line1"></b><b class="line2"></b>
+				<h2><span>基本信息</span></h2>
+				<div class="content">
+					<p>姓名：陈文华</p>
+					<p>性别：男</p>
+					<p>户籍：河北衡水</p>
+					<p>现居：北京市昌平区回龙观</p>
+					<p>年龄：25</p>
+					<p>电话：18331167839</p>
+					<p>邮箱：chenwehua00130@sina.com</p>
+					<p>QQ：2392023773</p>
+					<p>微信：2392023773</p>
+					<p>微博：做IT的十四学长</p>
+					<p>知乎：陈天澈</p>
+					<p>twitter：陈天澈</p>
+					<p>facebook：陈文华</p>
+				</div>
+			</div>
+			<a href="javascript:;" class="close"></a>
+		</div>
+
+		<div class="floatDiv2" id="e02">
+			<div class="content-wrap">
+				<b class="line1"></b><b class="line2"></b>
+				<h2>期望职位</h2>
+				<div class="content">
+					<p>工作性质：全职</p>
+					<p>期望职业：web前端工程师</p>
+				</div>
+			</div>
+			<a href="javascript:;" class="close"></a>
+		</div>
+
+		<div class="floatDiv2" id="e03">
+			<div class="content-wrap">
+				<b class="line1"></b><b class="line2"></b>
+				<div class="content">
+					<h4>职业技能</h4>
+					<p>良好的编码习惯和规范的代码和文档习惯</p>
+					<p>熟练掌握Html css js</p>
+					<p>熟练使用jQuery anjular.js ext Bootstrap等前端框架</p>
+					<p>熟练使用sunlime webstrom dreamweaver photoshop等相关软件</p>
+					<p></p>
+				</div>
+			</div>
+			<a href="javascript:;" class="close"></a>
+		</div>
+
+		<div class="floatDiv2" id="e04">
+			<b class="line1"></b><b class="line2"></b>
+			<div class="content-wrap">
+				<div class="content">
+					<h4>成功案例</h4>
+					<p>1、漫漫路动漫网站</p>
+					<p>2、XX后台管理系统</p>
+					<p>3、XX移动端APP</p>
+					<p>4、XX微信端</p>
+				</div>
+			</div>
+			<a href="javascript:;" class="close"></a>
+		</div>
+
+		<div class="floatDiv2" id="e05">
+			<b class="line1"></b><b class="line2"></b>
+			<div class="content-wrap">
+				<div class="content">
+					<h4>自我评价</h4>
+					<p>1、较强的适应能力和沟通能力</p>
+					<p>2、稳重乐观，对待工作认真严谨，有上进心</p>
+					<p>3、能认真完成领导交给的任务，吃苦耐劳</p>
+					<p>4、注重工作效率和团队合作</p>
+					<p>5、自学能力较强，乐于接受新鲜事物</p>
+				</div>
+			</div>
+			<a href="javascript:;" class="close"></a>
+					<script type="text/javascript">
+						TouchSlide({
+							slideCell: "#slideBox",
+							titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+							mainCell: ".bd ul",
+							effect: "leftLoop",
+							autoPage: true, //自动分页
+							autoPlay: false //自动播放
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+		</section>
+		<script src="asset/js/init.mix.js" type="text/javascript" charset="utf-8"></script>
+		<script src="asset/js/coffee.js" type="text/javascript" charset="utf-8"></script>
+		<script src="asset/js/99_main.js" type="text/javascript" charset="utf-8" defer="defer"></script>
+</body>
+</html>
